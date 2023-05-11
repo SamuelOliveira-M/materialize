@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 :root{
+	--cor-preta:black;
+	--cor-branca:#fff;
 	--cor-site:#FFCE3C;
 	--cor-bordas:rgb(194, 187, 187);
 	--font-category:Arial, Helvetica, sans-serif
@@ -10,70 +12,33 @@
 	margin: 0;
 }
 
-.wallpaper{
-	background-color: rgb(252, 252, 207);
-	width: 100vw;
-}
 
 body{
 	width: 100vw;
 	height: 100vh;
-	
-
 }
-div{
+
+.loginFrame{
+	width: 100vw;
 	height: 100vh;
 	
 }
-header{
-	background-color:var(--cor-site);
-	height: 70px;
 
-}
-header nav{
-	display: flex;
-	justify-content: space-between;
-	height: 100%;
-}
-header nav div{
-	display: flex;
-	padding: 5px;
-	align-items: center;
-	height: 90%;
-
-}
-.iconProfile{
-	max-width: 40px;
-	padding-right: 3px;
-
-}
-
-.profileData{
-	font-size: 0.9rem;
-	align-items: center;
-}
-.navigationIcon{
-	max-width: 35px;
-	padding: 5px;
-	
-}
-
-
-.center{
+.loginFrame{
 	display:flex;
 	justify-content: center;
 	align-items: center;
-
+	background-color:var(--cor-branca);
 }
 
 .cardLogin{
-	height: 80%;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: white;
+	background-color: var(--cor-branca);
 	border-radius: 2px;
+	padding: 20px;
 	
 }
 
@@ -84,7 +49,8 @@ img{
 .logo{
 	max-width: 150px;
 	border-radius: 50%;
-	box-shadow: 0px 2px 2px 0px  black;
+	box-shadow: 0px 2px 2px 0px  var(--cor-preta);
+	margin: 15px;
 }
 
 form{
@@ -92,22 +58,18 @@ form{
 	flex-direction: column;
 }
 
-form label{
-
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;;
-	margin-top: 10px;
-	
-}
 input{	
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 3px;
 	padding: 3px;
 	border-radius: 2px;
 	border:2px solid var(--cor-bordas)
+
 }
+
+
 
 .button{
 	margin: 0;	
@@ -127,17 +89,6 @@ form .button{
 
 }
 
-
-.productList{
-	display: grid;
-	grid-template-columns:repeat(auto,100%);
-	grid-row: inherit;
-	grid-column-gap: 10px;
-	grid-row-gap:10px;
-	grid-auto-rows: 220px;
-	
-}
-
 .linksExternos{
 	margin-top:25px;
 	display: flex;
@@ -153,74 +104,227 @@ a{
 	color: black;
 	padding-bottom: 3px;
 }
+
 .link{
 	margin-top: 50px;
 }
 
-.advertising{
-	align-items: center;
-	height: 100px;
-	background-color: #faf1d7;
-	margin: 4px;
-	box-shadow: 0 0 5px 1px var(--cor-bordas);
-}
-.banner{
-	max-height: 100%;
 
+
+
+
+/* Pagina Home */
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-template-columns: 1fr 2fr 1fr;
+	padding: 15px;
+	background-color: var(--cor-site);
 }
-.title{
-	padding: 5px;
-	margin: 5px;
-	font-size: 2.5rem;
+.header div{
+	display: flex;
+	align-items: center;
 	
 }
-.card{
+.nav-icons{
+	max-width: 40px;
+	margin-right: 15px;
+
+}
+
+.fa-search:before {
+	content: "\f002";
+  }
+  
+.search-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	align-items: center;
+	
+}
+
+.input-group {
+	display: flex;
 	align-items: center;
 	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	padding: 10px;
-	height: 200px;
-	text-align: center;
-		
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	max-width: 500px;
+	box-shadow: 2px 2px 4px #888888;
+	
 }
-.card img{
-	width: 100px;
+
+.input-group input[type="text"] {
+	padding: 10px 30px 10px 10px;
+	border: none;
+	font-size: 16px;
+	width: 100%;
+	background-image: url('https://cdn4.iconfinder.com/data/icons/octicons/1024/search-512.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 20px;
+}
+.Mensage{
+	margin-top: 30px;
+	padding: 10px 10px 0px  10px;
+	font-size: 20px;
+	font-family:monospace;
+	text-align: center;
+}
+
+.filter-container{
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	margin:15px 20px 30px 20px ;
+}
+.filter-card{
+	padding: 10px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color:var();
+}
+.filter-icons{
+	max-width:50px;
+
+}
+
+.product-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	row-gap: 10px;
+	justify-content: center;
+	align-items: center;
+
+}
+.card {
+	width: 170px;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+  
+.card img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.card .name-produt{ 
+	font-family: var(--font-category);
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 1rem;
 }
 
 .card .price {
-	font-size: 1.25rem;
-	font-weight: bold;
-	color: #007bff;
+	font-size: 1.2rem;
 	margin: 10px;
-
-}
-
-.price del{
-	color: black;
-	font-size: 0.7rem;
-	font-weight: 100;
-}
-
-.navegation{
-	position: fixed;
-	bottom:0;
-	left: 1%;
-	width: 98%;
-	padding: 10px;
-	height: 60px;
-	border-radius: 30px 30px 0px 0px;
-	box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
-	display: flex;
-	background-color: var(--cor-site);
-	justify-content: space-around; 
-} 
-
-.navegation  .icons{
-	padding: 10px;
-	max-width: 50px;
+	font-weight: bold;
 	
 }
+.card .price del{
+	font-weight: 100;
+	margin-left: 5px;
+	font-size: 0.9rem;
+}
+
+
+.card .button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	background-color:var(--cor-site);
+	color: var(--cor-branca);
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.rodape {
+	background-color: #f5f5f5;
+	padding: 40px 0;
+	margin-top:50px ;
+  }
+  
+  .rodape h4 {
+	font-size: 20px;
+	margin-bottom: 20px;
+  }
+  
+  .rodape ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .rodape ul li a {
+	color: #333;
+	text-decoration: none;
+  }
+  
+  .rodape ul li a:hover {
+	color: #666;
+  }
+  
+  .rodape i {
+	margin-right: 10px;
+	font-size: 18px;
+	color: #333;
+  }
+  
+  .rodape p {
+	font-size: 14px;
+	margin-top: 20px;
+	text-align: center;
+  }
+  
+  .container {
+	margin: 0 auto;
+	padding: 15px;
+
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+  .col-md-4 {
+	flex-basis: calc(33.33% - 30px);
+	margin-bottom: 30px;
+  }
+  
+
+@media(min-width:600px){
+	.filter-container{
+		padding: 5px;
+		justify-content: center;
+
+	}
+	.filter-card{
+		margin: 40px;
+	}
+	.product-list{
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	.card{
+		width: 250px;
+	}
+	.container{
+		margin: 0px 0px 0px 50px;
+	}
+	
+}
+
+
+   
