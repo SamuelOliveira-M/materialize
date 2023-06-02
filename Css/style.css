@@ -50,7 +50,7 @@ body{
 }
 
 img{
-	max-width:100%;
+	width:100%;
 }
 
 .logo{
@@ -205,11 +205,7 @@ a{
 .filter-nav a:hover{
 	text-decoration: underline;
 	font-weight: bold;
-	
-
-
 }
-
 
 .endereco img{
 	margin: 0px;
@@ -541,26 +537,34 @@ input[type="text"]:focus {
 
 	
 }
-
-.amount{
+.quantity-input{
 	display: flex;
-	padding: 5px;
+	justify-content: start;
+	align-items: center;
 	margin-bottom: 50px;
 
 }
-.amount #amount-box{
-	width: 30px;
-	height: 30px;
-	border: 1px solid var(--cor-bordas);
+.minus-btn{
+	background-color: var(--cor-branca);
+	border: none;
+	font-weight: bold;
+	font-size: 40px;
+	cursor: pointer;
 }
-#amount-box{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.2rem;
-	font-family: Arial, Helvetica, sans-serif;
-	
+.plus-btn{
+	background-color: var(--cor-branca);
+	border: none;
+	font-weight: bold;
+	font-size: 30px;
+	cursor: pointer;
 }
+.box-quantity{
+	font-size: 1rem;
+	width:30px;
+	height: 20px;
+	text-align: center;
+}
+
 #button-finaly{
 	display: flex;
 	width: 90%;
@@ -572,7 +576,6 @@ input[type="text"]:focus {
 	font-size: 1.2rem;
 	
 }
-
 
 
 
