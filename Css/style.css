@@ -50,14 +50,14 @@ body{
 }
 
 img{
-	max-width:90%;
+	width:100%;
 }
 
 .logo{
-	max-width: 120px;
-
+	width: 130px;
 	border-radius: 50%;
-	margin: 5px;
+	margin: 10px;
+	padding:5px ;
 }
 
 form{
@@ -206,7 +206,11 @@ a{
 	text-decoration: underline;
 	font-weight: bold;
 }
-
+.endereco{
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 15px;
+	padding-bottom:3px ;
+}
 .endereco img{
 	margin: 0px;
 	width: 15px;
@@ -373,7 +377,7 @@ a{
 	border-radius: 5px;
 	margin: 10px;
 	display: grid;
-	grid-template-columns: 0.8fr 1fr ;
+	grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 	background-color: #fff;
 	height: 330px;
@@ -407,7 +411,7 @@ a{
 
 	padding: 15px; 
 	background-color: #313131; 
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 0px 5px 5px;
 
 }
 
@@ -456,12 +460,17 @@ input[type="text"]:focus {
 	margin-right: 10px;
 
 }
+.product-preview img{
+	width:80%;
+}
+
 
 
 .basic-Product-information{
 	font-size: 1.5rem;
 	font-family: Arial, Helvetica, sans-serif;
 	margin-bottom:10px ;
+	padding:10px ;
 }
 .assessment img{
 	width: 15px;
@@ -487,6 +496,7 @@ input[type="text"]:focus {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 	margin: 0px 10px 0px 10px;
 	padding: 10px;
+	margin: 0px 10px 10px 10px;
 	border-radius: 5px;
 }
 
@@ -517,7 +527,7 @@ input[type="text"]:focus {
 	padding: 5px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: start;
 	font-family: Arial, Helvetica, sans-serif;
 	margin-bottom:30px ;
 
@@ -582,6 +592,11 @@ input[type="text"]:focus {
 
 
 @media(min-width:600px){
+	.contaner-register{
+		width: 600px;
+		display: grid;
+		grid-template-columns: 0.7fr 1fr ;
+	}
 	.filter-container{
 		padding: 5px;
 		justify-content: center;
@@ -609,6 +624,7 @@ input[type="text"]:focus {
 
 	.product-list{
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+		row-gap:50px;
 	}
 	.card{
 		width: 250px;
